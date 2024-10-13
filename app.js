@@ -21,10 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function getComputerChoice() {
-    const choices = ["rock🪨", "paper📃", "scissors✂️"];
+    const choices = ["rock", "paper", "scissors"];
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
-  }
+  };
 
   function determineWinner(player, computer) {
     if (player === computer) {
@@ -35,10 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
       (player === "scissors" && computer === "paper")
     ) {
       return "You win!";
-    } else {
+    }
+    else {
       return "You lose!";
     }
-  }
+  };
 
   function capitalize(word) {
     return word.charAt(0).toUpperCase() + word.slice(1);
